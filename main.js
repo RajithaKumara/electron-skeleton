@@ -17,6 +17,7 @@ const createWindow = () => {
     // Open the DevTools.
     // mainWindow.webContents.openDevTools()
   } else {
+    mainWindow.removeMenu();
     mainWindow.loadURL(`file://${path.join(__dirname, 'build/index.html')}`);
   }
 

@@ -1,5 +1,5 @@
 {
-  "name": "electron-skeleton",
+  "name": "react-electron-skeleton",
   "version": "0.1.0",
   "description": "",
   "main": "main.js",
@@ -8,7 +8,9 @@
     "dev-win": "concurrently \"set BROWSER=none && npm run react-start\" \"wait-on http://localhost:3000 && set NODE_ENV=development && electron .\"",
     "start": "rescripts build && cross-env NODE_ENV=production && electron .",
     "react-start": "rescripts start",
-    "react-build": "rescripts build"
+    "react-build": "rescripts build",
+    "pack-linux": "electron-packager . --platform=linux --out=out",
+    "pack-win": "electron-packager . --platform=win32 --out=out"
   },
   "license": "MIT",
   "devDependencies": {
@@ -17,6 +19,7 @@
     "concurrently": "^5.0.2",
     "cross-env": "^6.0.3",
     "electron": "^7.1.7",
+    "electron-packager": "^14.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "^3.3.0",
